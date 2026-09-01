@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Abuse Research</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --orange: #eb641e;
+      --slate: #202a30;
+      --almond: #fff1df;
+      --grey: #b4c4d0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+
+      background: linear-gradient(
+        135deg,
+        #182127,
+        var(--slate)
+      );
+
+      color: var(--almond);
+
+      font-family:
+        "Public Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      overflow: hidden;
+    }
+
+    .card {
+      text-align: center;
+      padding: 3rem 4rem;
+
+      border: 1px solid rgba(255, 241, 223, 0.14);
+      border-radius: 24px;
+
+      background: rgba(255, 241, 223, 0.045);
+      backdrop-filter: blur(18px);
+
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    h1 {
+      font-family:
+        "Public Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+
+    p {
+      margin-top: 1rem;
+
+      color: var(--grey);
+
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      display: inline-block;
+
+      width: 9px;
+      height: 9px;
+      margin-left: 0.45rem;
+
+      border-radius: 2px;
+
+      background: var(--orange);
+
+      box-shadow:
+        0 0 0 4px rgba(235, 100, 30, 0.08),
+        0 0 20px rgba(235, 100, 30, 0.5);
+
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.45;
+        transform: scale(0.85);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1>Coming soon<span class="dot"></span></h1>
+  </main>
+</body>
+</html>
