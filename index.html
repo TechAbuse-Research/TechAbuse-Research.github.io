@@ -1,124 +1,655 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tech Abuse Research</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Security and privacy: block third-party resources and form submissions, and never send this page's address to other sites. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
 
-  <style>
-    :root {
-      --orange: #eb641e;
-      --slate: #202a30;
-      --almond: #fff1df;
-      --grey: #b4c4d0;
-    }
+  <!-- TODO-PUBLISH: delete the next line when the site is approved for publication and should appear in search engines. -->
+  <meta name="robots" content="noindex, nofollow">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <title>Tech Abuse Research | Tech Abuse Handbook and Tech Abuse Checklists</title>
+  <meta name="description" content="Informed by real-world cases and our work with frontline support services, we translate security research into practical resources for victims and survivors of domestic tech abuse, including the free Tech Abuse Handbook.">
+  <meta name="theme-color" content="#2b1240">
+  <meta name="color-scheme" content="light">
 
-    body {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
-      background: linear-gradient(
-        135deg,
-        #182127,
-        var(--slate)
-      );
+  <!-- Open Graph (link previews when the site is shared) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tech Abuse Research">
+  <meta property="og:title" content="Tech Abuse Research">
+  <meta property="og:description" content="Practical resources for victims and survivors of domestic tech abuse, including the free Tech Abuse Handbook.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Absolute address of the site. If you move it to a custom domain, update these four lines. -->
+  <link rel="canonical" href="https://techabuse-research.github.io/">
+  <meta property="og:url" content="https://techabuse-research.github.io/">
+  <meta property="og:image" content="https://techabuse-research.github.io/assets/images/social-preview.jpg">
+  <meta property="og:image:alt" content="Tech Abuse Research">
 
-      color: var(--almond);
+  <link rel="preload" href="assets/fonts/lexend/lexend-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <noscript><link rel="stylesheet" href="css/no-js.css"></noscript>
 
-      font-family:
-        "Public Sans",
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      overflow: hidden;
-    }
-
-    .card {
-      text-align: center;
-      padding: 3rem 4rem;
-
-      border: 1px solid rgba(255, 241, 223, 0.14);
-      border-radius: 24px;
-
-      background: rgba(255, 241, 223, 0.045);
-      backdrop-filter: blur(18px);
-
-      box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.32),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
-    }
-
-    h1 {
-      font-family:
-        "Public Sans",
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-size: clamp(3rem, 8vw, 6rem);
-      font-weight: 700;
-      letter-spacing: -0.05em;
-      line-height: 1;
-    }
-
-    p {
-      margin-top: 1rem;
-
-      color: var(--grey);
-
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .dot {
-      display: inline-block;
-
-      width: 9px;
-      height: 9px;
-      margin-left: 0.45rem;
-
-      border-radius: 2px;
-
-      background: var(--orange);
-
-      box-shadow:
-        0 0 0 4px rgba(235, 100, 30, 0.08),
-        0 0 20px rgba(235, 100, 30, 0.5);
-
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 0.45;
-        transform: scale(0.85);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-  </style>
+  <script src="js/resources.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<body>
-  <main class="card">
-    <h1>Coming soon<span class="dot"></span></h1>
+  <!-- Icon sprite (decorative icons used throughout the page) -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-exit" viewBox="0 0 24 24"><path d="M10 4H6.5A2.5 2.5 0 0 0 4 6.5v11A2.5 2.5 0 0 0 6.5 20H10M15 8l4 4-4 4M19 12H9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2.2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5M12 14.5v2"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.8" width="10" height="18.4" rx="2.6"/><path d="M10.8 18h2.4"/></g></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="5" width="15" height="10.5" rx="1.6"/><path d="M2.5 19h19"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.4"/><path d="M3.5 7l8.5 6 8.5-6"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.2c0 4.4-2.9 8.1-7 9.8-4.1-1.7-7-5.4-7-9.8V6z"/><path d="M9 12l2 2 4-4"/></g></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 4.2 2.6 17.5A2 2 0 0 0 4.3 20.5h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0z"/><path d="M12 9.5v4M12 17h.01"/></g></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2.2"/><path d="M15.5 8.5V6.2A2.2 2.2 0 0 0 13.3 4H6.2A2.2 2.2 0 0 0 4 6.2v7.1a2.2 2.2 0 0 0 2.2 2.2h2.3"/></g></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></g></symbol>
+    <symbol id="i-banknote" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="6" width="18.4" height="12" rx="2.2"/><circle cx="12" cy="12" r="2.6"/><path d="M6.3 9.5h.01M17.7 14.5h.01"/></g></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.4"/><circle cx="9" cy="9.5" r="1.8"/><path d="M21 15.5l-5-5L6 20"/></g></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5.5h4V20"/></g></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M5.2 4.5h13.6a2.2 2.2 0 0 1 2.2 2.2v8.6a2.2 2.2 0 0 1-2.2 2.2h-7.1L6.5 21v-3.5H5.2A2.2 2.2 0 0 1 3 15.3V6.7a2.2 2.2 0 0 1 2.2-2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V3.5h10V9"/><rect x="3.5" y="9" width="17" height="8" rx="2"/><path d="M7 14h10v6.5H7z"/></g></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><path d="M8.7 13.4 7.5 21l4.5-2.6 4.5 2.6-1.2-7.6"/></g></symbol>
+    <symbol id="i-copyright" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.6a3.4 3.4 0 1 0 0 4.8"/></g></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.3s-7.6-4.6-9.3-9.5C1.6 7.4 3.9 4.3 7.3 4.3c2 0 3.6 1.1 4.7 2.8 1.1-1.7 2.7-2.8 4.7-2.8 3.4 0 5.7 3.1 4.6 6.5-1.7 4.9-9.3 9.5-9.3 9.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="site-header__bar">
+      <!-- Quick exit comes first in the reading and keyboard order so it can be reached immediately. -->
+      <a class="quick-exit" href="https://www.bbc.co.uk/news" rel="noreferrer" data-quick-exit>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-exit"/></svg>
+        <span>Quick exit</span>
+      </a>
+
+      <a class="brand" href="#top"><span>Tech Abuse</span> <span>Research</span></a>
+
+      <nav class="site-nav" aria-label="Main">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <svg class="icon nav-toggle__open" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>
+          <svg class="icon nav-toggle__close" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+          <span class="nav-toggle__label">Menu</span>
+        </button>
+        <ul class="site-menu" id="site-menu" role="list">
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#handbook">Handbook</a></li>
+          <li><a href="#checklists">Checklists</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ============================================================
+         1. HERO
+         ============================================================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <h1 class="hero__title" id="hero-title"><span>Tech Abuse</span> <span class="hero__title-accent">Research</span></h1>
+
+        <p class="hero__lead">Technology, while convenient, is increasingly exploited by perpetrators to cause harm in relationships. Informed by real-world cases and our work with frontline support services, we translate security research into practical resources that empower victims and survivors of domestic abuse, and those who support them.</p>
+
+        <div class="hero__aside">
+          <p class="hero__affiliation">We are researchers based in the <a href="https://www.royalholloway.ac.uk/research-and-education/subjects/information-security" rel="noopener noreferrer" target="_blank">Information Security Group (ISG)<span class="visually-hidden"> (opens in a new tab)</span></a> and the <a href="https://sites.google.com/view/maryammjd/usp-lab" rel="noopener noreferrer" target="_blank">Usable Security and Privacy (USP) Lab<span class="visually-hidden"> (opens in a new tab)</span></a> at <a href="https://www.royalholloway.ac.uk/" rel="noopener noreferrer" target="_blank">Royal Holloway, University of London<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
+          <div class="hero__actions">
+            <a class="btn btn--cream" href="#resources">
+              Explore our resources
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-down"/></svg>
+            </a>
+            <a class="btn btn--glass" href="#choose-handbook">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>
+              Download the handbook
+            </a>
+          </div>
+          <!-- Email links: the address is written in a form that spam robots don't recognise.
+               js/main.js turns a click on any class="js-email" link into an email to the team. -->
+          <p class="hero__contact">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+            <a class="js-email" href="#contact">TechAbuse-Research [at] rhul [dot] ac [dot] uk</a>
+          </p>
+          <p class="hero__safety">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+            <span>Need to leave this site quickly? Use <strong>Quick exit</strong> at the top of the page. It does not clear your browsing history.</span>
+          </p>
+        </div>
+
+        <!-- GROUP PHOTO. On larger screens it is shown smaller, in a wider frame whose sides are
+             filled with a blurred copy of the same photo (css/styles.css, "Group photo"). -->
+        <figure class="hero-photo">
+          <div class="hero-photo__frame">
+            <div class="hero-photo__stage">
+              <img class="hero-photo__img"
+                   src="assets/images/team/group-photo-1280.webp"
+                   srcset="assets/images/team/group-photo-800.webp 800w, assets/images/team/group-photo-1280.webp 1280w, assets/images/team/group-photo-1600.webp 1600w"
+                   sizes="(min-width: 80rem) 790px, (min-width: 62.5rem) 64vw, (min-width: 40rem) 73vw, 92vw"
+                   width="1600" height="827"
+                   alt="Group photo of people holding printed copies of the Tech Abuse Handbook"
+                   decoding="async">
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. EXPLORE OUR RESOURCES
+         ============================================================ -->
+    <section class="section section--cream resources" id="resources" aria-labelledby="resources-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <h2 class="section-title" id="resources-title">Explore Our Resources</h2>
+        </header>
+
+        <div class="resource-grid">
+          <article class="resource-card resource-card--handbook">
+            <div class="resource-card__media" aria-hidden="true">
+              <div class="cover-stack">
+                <img class="cover-stack__a5" src="assets/images/covers/uk-en-desktop-480.webp" width="480" height="681" alt="" loading="lazy" decoding="async">
+                <img class="cover-stack__mobile" src="assets/images/covers/uk-en-mobile-360.webp" width="360" height="640" alt="" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="resource-card__body">
+              <p class="badge badge--light">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"/></svg>
+                Free to download
+              </p>
+              <h3 class="resource-card__title">Tech Abuse Handbook</h3>
+              <p>A guide to digital safety for victims and survivors of technology-facilitated domestic abuse.</p>
+              <a class="btn btn--cream resource-card__cta" href="#handbook">
+                Explore the Handbook
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="resource-card resource-card--checklists">
+            <div class="resource-card__media" aria-hidden="true">
+              <img class="resource-card__illustration" src="assets/images/illustrations/checklists.svg" width="480" height="400" alt="" loading="lazy" decoding="async">
+            </div>
+            <div class="resource-card__body">
+              <p class="badge badge--purple">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>
+                Available on request
+              </p>
+              <h3 class="resource-card__title">Tech Abuse Checklists</h3>
+              <p>A structured set of checklists to help identify and safely respond to technology-facilitated abuse, designed for caseworkers supporting survivors of domestic abuse.</p>
+              <a class="btn btn--purple resource-card__cta" href="#checklists">
+                Explore the Checklists
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. ABOUT THE TEAM
+         Each card shows a portrait, name, title and profile link.
+         To add a person: copy one <li class="person"> block and edit it.
+         Portraits: square WebP, 288 x 288 pixels, in assets/images/team/ (see README).
+         To remove a person: delete their <li> block. The grid adapts automatically.
+         ============================================================ -->
+    <section class="section section--lilac team" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <h2 class="section-title" id="team-title">About the Team</h2>
+        </header>
+
+        <ul class="team-grid" role="list">
+          <!-- TEAM MEMBER (copy from here) -->
+          <li class="person">
+            <img class="person__photo" src="assets/images/team/maryam-mehrnezhad.webp" width="288" height="288" alt="" loading="lazy" decoding="async">
+            <div class="person__body">
+              <h3 class="person__name">Dr Maryam Mehrnezhad</h3>
+              <p class="person__role">Reader (Associate Professor)</p>
+              <p class="person__link"><a href="https://sites.google.com/view/maryammjd/home" rel="noopener noreferrer" target="_blank">Profile<span class="visually-hidden">: Maryam Mehrnezhad</span><span class="visually-hidden"> (opens in a new tab)</span></a></p>
+            </div>
+          </li>
+          <!-- TEAM MEMBER (copy to here) -->
+          <li class="person">
+            <img class="person__photo" src="assets/images/team/christian-weinert.webp" width="288" height="288" alt="" loading="lazy" decoding="async">
+            <div class="person__body">
+              <h3 class="person__name">Dr Christian Weinert</h3>
+              <p class="person__role">Associate Professor</p>
+              <p class="person__link"><a href="https://pure.royalholloway.ac.uk/en/persons/christian-weinert" rel="noopener noreferrer" target="_blank">Profile<span class="visually-hidden">: Christian Weinert</span><span class="visually-hidden"> (opens in a new tab)</span></a></p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="person__photo" src="assets/images/team/taylor-robinson.webp" width="288" height="288" alt="" loading="lazy" decoding="async">
+            <div class="person__body">
+              <h3 class="person__name">Dr Taylor Robinson</h3>
+              <p class="person__role">Research Associate</p>
+              <p class="person__link"><a href="https://pure.royalholloway.ac.uk/en/persons/taylor-robinson" rel="noopener noreferrer" target="_blank">Profile<span class="visually-hidden">: Taylor Robinson</span><span class="visually-hidden"> (opens in a new tab)</span></a></p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="acknowledgements">
+          <span class="acknowledgements__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-heart"/></svg></span>
+          <div>
+            <h3 class="acknowledgements__title">Acknowledgements</h3>
+            <p>We are grateful to everyone who has helped develop our resources: all members of the USP Lab for their feedback; our partners at the <a href="https://sdapartnership.org/" rel="noopener noreferrer" target="_blank">Surrey Domestic Abuse Partnership (SDAP)<span class="visually-hidden"> (opens in a new tab)</span></a> for their collaboration and frontline expertise; the volunteers who translated the handbook; <a href="https://safelives.org.uk/" rel="noopener noreferrer" target="_blank">SafeLives<span class="visually-hidden"> (opens in a new tab)</span></a> and the <a href="https://www.unfpa.org/" rel="noopener noreferrer" target="_blank">United Nations Population Fund (UNFPA)<span class="visually-hidden"> (opens in a new tab)</span></a> for their expert feedback on the checklists; <a href="https://www.techagainstviolence.ch/" hreflang="de" rel="noopener noreferrer" target="_blank">Tech against Violence<span class="visually-hidden"> (opens in a new tab)</span></a> for their collaboration on the Swiss edition; and <a href="https://noon.studio/" rel="noopener noreferrer" target="_blank">Studio Noon<span class="visually-hidden"> (opens in a new tab)</span></a> for their design work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4a. HANDBOOK OVERVIEW: what's inside, choosing a handbook and a layout
+         ============================================================ -->
+    <section class="section section--purple handbook-intro" id="handbook" aria-labelledby="handbook-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow eyebrow--on-dark">Free to download</p>
+          <h2 class="section-title" id="handbook-title">Tech Abuse Handbook</h2>
+          <p class="section-lead">Some tech abuse is obvious, but other forms are subtle, hidden in app settings and invisible connections. The Tech Abuse Handbook helps you take back control: each chapter gives risk examples, explains how to protect yourself and points to additional resources.</p>
+        </header>
+
+        <div class="topics">
+          <h3 class="mini-heading">What’s inside</h3>
+          <ul class="topic-grid" role="list">
+            <li class="topic topic--basics">
+              <span class="topic__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-shield"/></svg></span>
+              <h4 class="topic__title">Your Digital Safety: The Basics</h4>
+            </li>
+            <li class="topic topic--financial">
+              <span class="topic__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-banknote"/></svg></span>
+              <h4 class="topic__title">Financial Abuse</h4>
+            </li>
+            <li class="topic topic--location">
+              <span class="topic__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-map-pin"/></svg></span>
+              <h4 class="topic__title">Location Tracking</h4>
+            </li>
+            <li class="topic topic--images">
+              <span class="topic__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-image"/></svg></span>
+              <h4 class="topic__title">Intimate Images &amp; Videos</h4>
+            </li>
+            <li class="topic topic--home">
+              <span class="topic__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-home"/></svg></span>
+              <h4 class="topic__title">Smart Home</h4>
+            </li>
+            <li class="topic topic--messaging">
+              <span class="topic__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-message"/></svg></span>
+              <h4 class="topic__title">Messaging Apps &amp; Social Media</h4>
+            </li>
+          </ul>
+        </div>
+
+        <div class="handbook-intro__grid">
+          <div class="region-picker" id="choose-handbook">
+            <h3 class="mini-heading">Choose your handbook</h3>
+            <p class="region-picker__note">The handbook currently exists for the UK and Switzerland, in several languages.</p>
+            <ul class="region-grid" role="list">
+              <li class="region-card">
+                <span class="region-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-map-pin"/></svg></span>
+                <h4 class="region-card__title"><a class="stretched-link" href="#handbook-uk">United Kingdom</a></h4>
+                <ul class="region-card__langs" role="list" aria-label="Languages" data-region-languages="uk"><li lang="en">English</li><li lang="pl">Polski</li><li lang="fa" dir="rtl">فارسی</li><li lang="ur" dir="rtl">اردو</li><li lang="hi">हिन्दी</li><li lang="pt">Português</li></ul>
+                <span class="region-card__cta" aria-hidden="true">View the UK handbook <svg class="icon" focusable="false"><use href="#i-arrow-right"/></svg></span>
+              </li>
+              <li class="region-card">
+                <span class="region-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-map-pin"/></svg></span>
+                <h4 class="region-card__title"><a class="stretched-link" href="#handbook-switzerland">Switzerland</a></h4>
+                <ul class="region-card__langs" role="list" aria-label="Languages" data-region-languages="switzerland"><li lang="en">English</li><li lang="de">Deutsch</li><li lang="fr">Français</li><li lang="it">Italiano</li></ul>
+                <span class="region-card__cta" aria-hidden="true">View the Swiss handbook <svg class="icon" focusable="false"><use href="#i-arrow-right"/></svg></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="layout-guide">
+            <h3 class="mini-heading">Mobile or desktop?</h3>
+            <p class="layout-guide__intro">Both layouts have the same content; only the page design differs.</p>
+            <dl class="layout-guide__list">
+              <div class="layout-guide__item">
+                <dt><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> Mobile layout</dt>
+                <dd>Tall, single-column pages sized for a phone screen, with large text and a tappable contents page.</dd>
+              </div>
+              <div class="layout-guide__item">
+                <dt><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-laptop"/></svg> Desktop layout</dt>
+                <dd>Conventional A5 pages, best for reading on laptops, tablets and larger screens.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4b. HANDBOOK: UNITED KINGDOM
+         Downloads in this section are generated from js/resources.js.
+         ============================================================ -->
+    <section class="section section--cream edition" id="handbook-uk" aria-labelledby="uk-title">
+      <div class="container">
+        <div class="edition__top">
+          <div class="edition__intro">
+            <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg> United Kingdom</p>
+            <h2 class="section-title" id="uk-title">Tech Abuse Handbook<span class="visually-hidden">: UK edition</span></h2>
+            <p class="edition__lead">The UK edition was created by the Information Security Group (ISG) at Royal Holloway, University of London (RHUL), in collaboration with the Surrey Domestic Abuse Partnership (SDAP).</p>
+          </div>
+
+          <div class="edition__feature" data-edition-feature="uk" data-language="en">
+            <noscript>
+              <!-- noscript-downloads:uk:start (generated by tools/site-check.mjs; do not edit by hand) -->
+              <table class="fallback-downloads">
+                <caption>Download the UK edition (PDF)</caption>
+                <thead><tr><th scope="col">Language</th><th scope="col">Mobile layout</th><th scope="col">Desktop layout</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">English</th><td><a href="assets/documents/uk/handbook-en-mobile-v1-0.pdf" download="Tech-Abuse-Handbook_UK_English_Mobile_v1-0.pdf" type="application/pdf" hreflang="en">Download PDF (2.6 MB)<span class="visually-hidden">: English, mobile layout</span></a></td><td><a href="assets/documents/uk/handbook-en-desktop-v1-0.pdf" download="Tech-Abuse-Handbook_UK_English_Desktop_v1-0.pdf" type="application/pdf" hreflang="en">Download PDF (1.6 MB)<span class="visually-hidden">: English, desktop layout</span></a></td></tr>
+                  <tr><th scope="row"><span lang="pl">Polski</span> – Polish</th><td><a href="assets/documents/uk/handbook-pl-mobile-v1-0.pdf" download="Tech-Abuse-Handbook_UK_Polish_Mobile_v1-0.pdf" type="application/pdf" hreflang="pl">Download PDF (3.8 MB)<span class="visually-hidden">: Polish, mobile layout</span></a></td><td>—<span class="visually-hidden"> not available in this layout</span></td></tr>
+                  <tr><th scope="row"><span lang="fa" dir="rtl">فارسی</span> – Persian (Farsi)</th><td><a href="assets/documents/uk/handbook-fa-mobile-v1-0.pdf" download="Tech-Abuse-Handbook_UK_Persian-Farsi_Mobile_v1-0.pdf" type="application/pdf" hreflang="fa">Download PDF (3.8 MB)<span class="visually-hidden">: Persian (Farsi), mobile layout</span></a></td><td>—<span class="visually-hidden"> not available in this layout</span></td></tr>
+                  <tr><th scope="row"><span lang="ur" dir="rtl">اردو</span> – Urdu</th><td><a href="assets/documents/uk/handbook-ur-mobile-v1-0.pdf" download="Tech-Abuse-Handbook_UK_Urdu_Mobile_v1-0.pdf" type="application/pdf" hreflang="ur">Download PDF (4.0 MB)<span class="visually-hidden">: Urdu, mobile layout</span></a></td><td>—<span class="visually-hidden"> not available in this layout</span></td></tr>
+                  <tr><th scope="row"><span lang="hi">हिन्दी</span> – Hindi</th><td><a href="assets/documents/uk/handbook-hi-mobile-v1-0.pdf" download="Tech-Abuse-Handbook_UK_Hindi_Mobile_v1-0.pdf" type="application/pdf" hreflang="hi">Download PDF (3.8 MB)<span class="visually-hidden">: Hindi, mobile layout</span></a></td><td>—<span class="visually-hidden"> not available in this layout</span></td></tr>
+                  <tr><th scope="row"><span lang="pt">Português</span> – Portuguese</th><td><a href="assets/documents/uk/handbook-pt-mobile-v1-0.pdf" download="Tech-Abuse-Handbook_UK_Portuguese_Mobile_v1-0.pdf" type="application/pdf" hreflang="pt">Download PDF (3.8 MB)<span class="visually-hidden">: Portuguese, mobile layout</span></a></td><td>—<span class="visually-hidden"> not available in this layout</span></td></tr>
+                </tbody>
+              </table>
+              <!-- noscript-downloads:uk:end -->
+            </noscript>
+          </div>
+        </div>
+
+        <div class="languages">
+          <div class="languages__head">
+            <h3 class="sub-title">Other languages in the UK</h3>
+            <p>Translations of the UK edition are produced in the <strong>mobile layout</strong>.</p>
+          </div>
+          <div class="lang-grid-wrap" data-edition-grid="uk" data-exclude="en"></div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <span class="info-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-award"/></svg></span>
+            <h3 class="info-card__title">Funding</h3>
+            <p>The handbook was created in 2025 as part of a project funded by the Economic and Social Research Council via the Social Science Impact Accelerator programme at Royal Holloway.</p>
+          </div>
+          <div class="info-card">
+            <span class="info-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-copyright"/></svg></span>
+            <h3 class="info-card__title">Copyright and licence</h3>
+            <p>The copyright in this handbook belongs to Royal Holloway and Bedford New College, and it can be used under the Creative Commons CC BY-NC-ND license. If you wish to modify this handbook or use it for commercial purposes, please get in touch with <a class="js-email" href="#contact" data-subject="Licensing enquiry: Tech Abuse Handbook">TechAbuse-Research [at] rhul [dot] ac [dot] uk</a> to discuss the terms of a license.</p>
+          </div>
+          <div class="info-card info-card--action">
+            <span class="info-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-printer"/></svg></span>
+            <h3 class="info-card__title">Print-ready files</h3>
+            <p>Organisations that would like to print copies of the handbook can request print-ready files from the research team.</p>
+            <a class="text-link js-email" href="#contact" data-subject="Print-ready files request: Tech Abuse Handbook (UK)">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+              Email us to request print files<span class="visually-hidden"> for the UK edition</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. HANDBOOK: SWITZERLAND
+         ============================================================ -->
+    <section class="section section--stone edition edition--ch" id="handbook-switzerland" aria-labelledby="ch-title">
+      <div class="container">
+        <div class="edition__intro edition__intro--wide">
+          <p class="eyebrow"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg> Switzerland</p>
+          <h2 class="section-title" id="ch-title">Tech Abuse Handbook<span class="visually-hidden">: Swiss edition</span></h2>
+          <p class="edition__lead">The Swiss edition was developed by the Information Security Group (ISG) at Royal Holloway, University of London (RHUL), in collaboration with the <a href="https://www.public-discourse.org/en" rel="noopener noreferrer" target="_blank">Public Discourse Foundation<span class="visually-hidden"> (opens in a new tab)</span></a> and <a href="https://www.techagainstviolence.ch/" hreflang="de" rel="noopener noreferrer" target="_blank">Tech against Violence<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
+        </div>
+
+        <div class="languages languages--ch">
+          <div class="languages__head">
+            <h3 class="sub-title">Choose your language</h3>
+          </div>
+          <div class="lang-grid-wrap" data-edition-grid="switzerland">
+            <noscript>
+              <!-- noscript-downloads:switzerland:start (generated by tools/site-check.mjs; do not edit by hand) -->
+              <table class="fallback-downloads">
+                <caption>Download the Swiss edition (PDF)</caption>
+                <thead><tr><th scope="col">Language</th><th scope="col">Mobile layout</th><th scope="col">Desktop layout</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">English</th><td>Coming soon</td><td>Coming soon</td></tr>
+                  <tr><th scope="row"><span lang="de">Deutsch</span> – German</th><td>Coming soon</td><td>Coming soon</td></tr>
+                  <tr><th scope="row"><span lang="fr">Français</span> – French</th><td>Coming soon</td><td>Coming soon</td></tr>
+                  <tr><th scope="row"><span lang="it">Italiano</span> – Italian</th><td>Coming soon</td><td>Coming soon</td></tr>
+                </tbody>
+              </table>
+              <!-- noscript-downloads:switzerland:end -->
+            </noscript>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <span class="info-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-award"/></svg></span>
+            <h3 class="info-card__title">Funding</h3>
+            <p>The Swiss edition was made possible through the financial support of Soroptimist International Switzerland, the Federal Office for Gender Equality, the Canton of Geneva, and the <span lang="fr">Fondation pour l’égalité de genre</span>.</p>
+          </div>
+          <div class="info-card">
+            <span class="info-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-copyright"/></svg></span>
+            <h3 class="info-card__title">Copyright and licence</h3>
+            <p>The copyright in this handbook belongs to Royal Holloway and Bedford New College, and it can be used under the Creative Commons CC BY-NC-ND license. If you wish to modify this handbook or use it for commercial purposes, please get in touch with <a class="js-email" href="#contact" data-subject="Licensing enquiry: Tech Abuse Handbook (Switzerland)">TechAbuse-Research [at] rhul [dot] ac [dot] uk</a> to discuss the terms of a license.</p>
+          </div>
+          <div class="info-card info-card--action">
+            <span class="info-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-printer"/></svg></span>
+            <h3 class="info-card__title">Print-ready files</h3>
+            <p>Organisations that would like to print copies of the Swiss edition can request print-ready files from the research team.</p>
+            <a class="text-link js-email" href="#contact" data-subject="Print-ready files request: Tech Abuse Handbook (Switzerland)">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+              Email us to request print files<span class="visually-hidden"> for the Swiss edition</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. TECH ABUSE CHECKLISTS (restricted distribution)
+         IMPORTANT: never add the checklists PDF to this repository.
+         Access is handled by email only (see README: Checklists).
+         ============================================================ -->
+    <section class="section section--cream checklists" id="checklists" aria-labelledby="checklists-title">
+      <div class="container checklists__grid">
+        <div class="checklists__info">
+          <p class="badge badge--glass">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>
+            Available on request
+          </p>
+          <h2 class="section-title" id="checklists-title">Tech Abuse Checklists</h2>
+          <p class="checklists__lead">Designed for caseworkers supporting survivors of domestic abuse, the Tech Abuse Checklists help identify and safely respond to many aspects of tech abuse.</p>
+          <p class="checklists__text">In particular, caseworkers can use them when a survivor reports abusive behaviour involving technology, when there are digital behaviours the survivor cannot explain fully, or when a general domestic abuse risk checklist (e.g., DASH) reveals risks of tech abuse.</p>
+
+          <div class="checklists__block">
+            <h3 class="mini-heading">Four parts</h3>
+            <p>The checklists are structured to guide caseworkers through a clear process:</p>
+            <ol class="parts" role="list">
+              <li>
+                <span class="parts__n" aria-hidden="true">1</span>
+                <div><p class="parts__title"><span class="visually-hidden">Part 1: </span>Initial Screening Checklist</p><p>Screen for different types of tech abuse.</p></div>
+              </li>
+              <li>
+                <span class="parts__n" aria-hidden="true">2</span>
+                <div><p class="parts__title"><span class="visually-hidden">Part 2: </span>Specialised Tech Abuse Checklists</p><p>Identify instances and explore specific types of tech abuse in more detail.</p></div>
+              </li>
+              <li>
+                <span class="parts__n" aria-hidden="true">3</span>
+                <div><p class="parts__title"><span class="visually-hidden">Part 3: </span>Risk Indicators and Summary</p><p>Helps to determine escalation risks and summarise the survivor’s individual situation.</p></div>
+              </li>
+              <li>
+                <span class="parts__n" aria-hidden="true">4</span>
+                <div><p class="parts__title"><span class="visually-hidden">Part 4: </span>Action Plan and Signposting</p><p>Provides practical, tailored steps to establish safety protocols, document the abuse, and refer the survivor to specialist support.</p></div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <section class="request" id="request-access" tabindex="-1" aria-labelledby="request-title">
+          <h3 class="request__title" id="request-title">Request access</h3>
+          <p class="request__intro">For organisations and researchers who would like to use the checklists.</p>
+          <p class="request__how js-only">This form prepares an email to the research team. <strong>Nothing is sent from this website:</strong> your email app opens a draft for you to review and send.</p>
+
+          <div class="error-summary" id="error-summary" tabindex="-1" hidden>
+            <div role="alert">
+              <h4 class="error-summary__title">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert"/></svg>
+                Please check the following
+              </h4>
+              <ul class="error-summary__list" role="list"></ul>
+            </div>
+          </div>
+
+          <!-- The form is controlled by js/main.js: it checks the fields and prepares an email.
+               It never submits anything (the page's security policy blocks form submission), and
+               it is hidden when JavaScript is turned off (see css/no-js.css). -->
+          <form class="request-form" id="access-form" method="post" novalidate>
+            <p class="form-hint">Fields marked <span class="req">*</span> are required.</p>
+            <div class="field" data-field="name">
+              <label for="req-name">Name <span class="req" aria-hidden="true">*</span></label>
+              <p class="field__error" id="req-name-error" hidden></p>
+              <input id="req-name" name="name" type="text" autocomplete="name" required maxlength="120" spellcheck="false">
+            </div>
+            <div class="field" data-field="email">
+              <label for="req-email">Email address <span class="req" aria-hidden="true">*</span></label>
+              <p class="field__hint" id="req-email-hint">We’ll reply to this address.</p>
+              <p class="field__error" id="req-email-error" hidden></p>
+              <input id="req-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="160" spellcheck="false" aria-describedby="req-email-hint">
+            </div>
+            <div class="field" data-field="organisation">
+              <label for="req-org">Organisation or affiliation</label>
+              <input id="req-org" name="organisation" type="text" autocomplete="organization" maxlength="160">
+            </div>
+            <div class="field" data-field="purpose">
+              <label for="req-purpose">Purpose of your request <span class="req" aria-hidden="true">*</span></label>
+              <p class="field__hint" id="req-purpose-hint">Briefly describe your role and how you intend to use the checklists.</p>
+              <p class="field__error" id="req-purpose-error" hidden></p>
+              <textarea id="req-purpose" name="purpose" rows="6" required autocomplete="off" data-max-words="500" aria-describedby="req-purpose-hint"></textarea>
+              <!-- Word counter: the visible count updates as you type; screen readers hear it after a short pause. -->
+              <p class="field__count" id="req-purpose-count" aria-hidden="true"></p>
+              <p class="visually-hidden" id="req-purpose-limit">You can enter up to 500 words.</p>
+              <p class="visually-hidden" id="req-purpose-count-live" role="status"></p>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn--purple" type="submit" id="prepare-email">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+                Prepare email
+              </button>
+              <button class="btn btn--quiet" type="reset">Clear form</button>
+              <p class="form-actions__hint" id="prepare-hint" hidden>Fill in all required fields to prepare your email.</p>
+            </div>
+          </form>
+
+          <section class="result" id="request-result" tabindex="-1" aria-labelledby="result-title" hidden>
+            <h4 class="result__title" id="result-title">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+              Your request has not been sent yet
+            </h4>
+            <p>We’ve asked your device to open a draft email addressed to <strong data-email-address></strong>. Please check the draft and press <em>Send</em> in your email app.</p>
+            <p>If no email app opened, copy your request below and send it from any email account.</p>
+            <div class="result__actions">
+              <button class="btn btn--outline" type="button" id="copy-request">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>
+                Copy request text
+              </button>
+              <a class="btn btn--outline" id="reopen-email" href="#request-access">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+                Open email again
+              </a>
+            </div>
+            <p class="result__status" id="copy-status" role="status" aria-live="polite"></p>
+            <label class="result__label" for="request-text">Your request text</label>
+            <textarea class="result__text" id="request-text" rows="9" readonly></textarea>
+          </section>
+
+          <noscript>
+            <p class="noscript-note">This form needs JavaScript, which is turned off in your browser. You can still email your request to the address below.</p>
+          </noscript>
+
+          <p class="request__fallback">
+            Prefer to write your own email? Send your request to
+            <a class="js-email" href="#contact" data-subject="Tech Abuse Checklists — Access Request">TechAbuse-Research [at] rhul [dot] ac [dot] uk</a>,
+            including your name, organisation and how you plan to use the checklists.
+          </p>
+        </section>
+
+        <!-- Funding and licence, styled like the handbook's info cards (a row below the panel and the form). -->
+        <div class="info-grid checklists__facts">
+          <div class="info-card">
+            <span class="info-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-award"/></svg></span>
+            <h3 class="info-card__title">Funding</h3>
+            <p>The checklists were created in 2026 by the Information Security Group (ISG) at Royal Holloway, University of London (RHUL) in collaboration with the Surrey Domestic Abuse Partnership (SDAP), as part of a project which was funded by Research England via the Participatory Research Fund (PRF) programme at Royal Holloway. This version has received extensive expert feedback from SafeLives and the United Nations Population Fund (UNFPA).</p>
+          </div>
+          <div class="info-card">
+            <span class="info-card__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-copyright"/></svg></span>
+            <h3 class="info-card__title">Copyright and licence</h3>
+            <p>The copyright in these checklists belongs to Royal Holloway and Bedford New College, and they can be used under the Creative Commons CC BY-NC-ND license. If you wish to modify these checklists or use them for commercial purposes, please get in touch with <a class="js-email" href="#contact" data-subject="Licensing enquiry: Tech Abuse Checklists">TechAbuse-Research [at] rhul [dot] ac [dot] uk</a> to discuss the terms of a license.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- ============================================================
+       7. CONTACT AND FOOTER
+       ============================================================ -->
+  <footer class="site-footer" id="contact" tabindex="-1" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="footer-contact">
+        <div>
+          <h2 class="footer-contact__title" id="contact-title">Get in touch</h2>
+          <p>For questions about our research, print-ready handbook files, licensing, or access to the checklists.</p>
+        </div>
+        <div class="footer-contact__action">
+          <a class="footer-email js-email" href="#contact">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>
+            <span>TechAbuse-Research [at] rhul [dot] ac [dot] uk</span>
+          </a>
+          <p class="footer-contact__note">This is a research team inbox, not a support service. If you are in immediate danger, call <strong>999</strong> in the UK or <strong>117</strong> (police) in Switzerland.</p>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col" id="website-safety">
+          <h2 class="footer-heading">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+            Website safety
+          </h2>
+          <ul class="footer-list" role="list">
+            <li><strong>Quick exit</strong> replaces this page with the BBC News website straight away.</li>
+            <li>It does not delete your browsing history, close other tabs or protect against monitoring software.</li>
+            <li>Handbooks you download are saved on your device.</li>
+            <li>If you think someone may be monitoring your device, consider using one they cannot access.</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg>
+            Privacy
+          </h2>
+          <p>This website uses no cookies, analytics or tracking. It is hosted on GitHub Pages, which logs visitors’ IP addresses for security purposes.</p>
+        </div>
+      </div>
+
+      <div class="footer-base">
+        <a class="back-to-top" href="#top">
+          Back to top
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

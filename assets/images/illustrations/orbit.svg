@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" fill="none">
+  <!-- Decorative "orbit" line with dot terminals, a recurring motif in the handbook artwork. -->
+  <path d="M20 330C170 470 520 430 640 250 720 130 820 120 880 60" stroke="#F3E6FA" stroke-opacity=".38" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="20" cy="330" r="5" fill="#F3E6FA" fill-opacity=".6"/>
+  <circle cx="880" cy="60" r="5" fill="#F3E6FA" fill-opacity=".6"/>
+</svg>

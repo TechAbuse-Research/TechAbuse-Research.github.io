@@ -1,0 +1,35 @@
+/* Loaded only when JavaScript is turned off (see the <noscript> in index.html).
+   Keeps navigation and downloads usable without scripts. */
+
+/* Show the navigation links as a simple wrapped row instead of a dropdown */
+.nav-toggle { display: none !important; }
+
+@media (max-width: 66.99rem) {
+  :root { --header-h: 140px; }
+  .site-header__bar { flex-wrap: wrap; border-radius: 26px; }
+  .site-nav { order: 4; width: 100%; }
+  .site-menu {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.15rem;
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .site-menu a { min-height: 44px; padding: 0.4rem 0.7rem; font-size: 0.95rem; }
+}
+
+/* Elements that only work with JavaScript. The access-request form is one of
+   them: without JavaScript, visitors are asked to email the team directly. */
+.js-only,
+.request-form { display: none !important; }
+
+/* The download lists are shown as plain tables */
+.edition__feature .fallback-downloads,
+.lang-grid-wrap .fallback-downloads { box-shadow: var(--shadow-soft); }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600">
+  <!-- Decorative background shape inspired by the handbook's grid motif. -->
+  <defs>
+    <clipPath id="gb">
+      <path d="M338 26c128-12 252 70 270 196 17 118-58 164-102 242-50 88-164 124-272 88C130 516 46 454 40 326 32 178 178 40 338 26z"/>
+    </clipPath>
+    <pattern id="gg" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" fill="none" stroke="#E7D3F4" stroke-opacity=".34" stroke-width="1.2"/>
+    </pattern>
+    <radialGradient id="gf" cx="38%" cy="32%" r="75%">
+      <stop offset="0" stop-color="#C08BDD" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#8C58BC" stop-opacity=".12"/>
+    </radialGradient>
+  </defs>
+  <path d="M338 26c128-12 252 70 270 196 17 118-58 164-102 242-50 88-164 124-272 88C130 516 46 454 40 326 32 178 178 40 338 26z" fill="url(#gf)"/>
+  <rect width="640" height="600" fill="url(#gg)" clip-path="url(#gb)"/>
+</svg>
