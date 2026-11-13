@@ -138,14 +138,53 @@ window.TAR_HANDBOOK = {
     },
 
     /* ---------------- Switzerland ----------------
-       Not published yet. When a PDF arrives, check its version and adjust the
-       end of the file name to match (for example -v1-0 for version 1.0). */
-    { region: 'switzerland', language: 'en', layout: 'mobile', status: 'coming-soon', file: 'assets/documents/switzerland/handbook-en-mobile-v1-0.pdf' },
-    { region: 'switzerland', language: 'en', layout: 'desktop', status: 'coming-soon', file: 'assets/documents/switzerland/handbook-en-desktop-v1-0.pdf' },
+       Every language comes in both layouts. Covers: page 1 of each PDF with
+       the logo band removed (see README, "Adding a cover").
+       German and Italian are not published yet. When a PDF arrives, check
+       its version and adjust the end of the file name to match (for example
+       -v1-0 for version 1.0). */
+    {
+      region: 'switzerland', language: 'en', layout: 'mobile',
+      status: 'available',
+      file: 'assets/documents/switzerland/handbook-en-mobile-v1-0.pdf',
+      size: '3.9 MB',
+      cover: 'assets/images/covers/switzerland-en-mobile-360.webp',
+      coverSrcset: 'assets/images/covers/switzerland-en-mobile-360.webp 360w, assets/images/covers/switzerland-en-mobile-720.webp 720w',
+      version: '1.0',
+      published: 'November 2026'
+    },
+    {
+      region: 'switzerland', language: 'en', layout: 'desktop',
+      status: 'available',
+      file: 'assets/documents/switzerland/handbook-en-desktop-v1-0.pdf',
+      size: '1.8 MB',
+      cover: 'assets/images/covers/switzerland-en-desktop-480.webp',
+      coverSrcset: 'assets/images/covers/switzerland-en-desktop-480.webp 480w, assets/images/covers/switzerland-en-desktop-960.webp 960w',
+      version: '1.0',
+      published: 'November 2026'
+    },
     { region: 'switzerland', language: 'de', layout: 'mobile', status: 'coming-soon', file: 'assets/documents/switzerland/handbook-de-mobile-v1-0.pdf' },
     { region: 'switzerland', language: 'de', layout: 'desktop', status: 'coming-soon', file: 'assets/documents/switzerland/handbook-de-desktop-v1-0.pdf' },
-    { region: 'switzerland', language: 'fr', layout: 'mobile', status: 'coming-soon', file: 'assets/documents/switzerland/handbook-fr-mobile-v1-0.pdf' },
-    { region: 'switzerland', language: 'fr', layout: 'desktop', status: 'coming-soon', file: 'assets/documents/switzerland/handbook-fr-desktop-v1-0.pdf' },
+    {
+      region: 'switzerland', language: 'fr', layout: 'mobile',
+      status: 'available',
+      file: 'assets/documents/switzerland/handbook-fr-mobile-v1-0.pdf',
+      size: '3.7 MB',
+      cover: 'assets/images/covers/switzerland-fr-mobile-360.webp',
+      coverSrcset: 'assets/images/covers/switzerland-fr-mobile-360.webp 360w, assets/images/covers/switzerland-fr-mobile-720.webp 720w',
+      version: '1.0',
+      published: 'November 2026'
+    },
+    {
+      region: 'switzerland', language: 'fr', layout: 'desktop',
+      status: 'available',
+      file: 'assets/documents/switzerland/handbook-fr-desktop-v1-0.pdf',
+      size: '1.5 MB',
+      cover: 'assets/images/covers/switzerland-fr-desktop-480.webp',
+      coverSrcset: 'assets/images/covers/switzerland-fr-desktop-480.webp 480w, assets/images/covers/switzerland-fr-desktop-960.webp 960w',
+      version: '1.0',
+      published: 'November 2026'
+    },
     { region: 'switzerland', language: 'it', layout: 'mobile', status: 'coming-soon', file: 'assets/documents/switzerland/handbook-it-mobile-v1-0.pdf' },
     { region: 'switzerland', language: 'it', layout: 'desktop', status: 'coming-soon', file: 'assets/documents/switzerland/handbook-it-desktop-v1-0.pdf' }
   ]

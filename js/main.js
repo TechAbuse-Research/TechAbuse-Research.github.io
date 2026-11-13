@@ -434,7 +434,12 @@
       });
       list.appendChild(el('li', { class: 'lang-card' }, [
         el('div', { class: 'lang-card__head' }, [
-          withCover ? el('img', { class: 'lang-card__thumb', src: withCover.cover, alt: '', loading: 'lazy', decoding: 'async' }) : null,
+          withCover ? el('img', {
+            class: 'lang-card__thumb', src: withCover.cover, alt: '', loading: 'lazy', decoding: 'async',
+            // The cover's shape (A5 or phone screen), so the card keeps its size while the image loads
+            width: withCover.layout === 'desktop' ? 480 : 360,
+            height: withCover.layout === 'desktop' ? 681 : 640
+          }) : null,
           name
         ]),
         formats
