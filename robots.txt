@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techabuse-research.github.io/sitemap.xml

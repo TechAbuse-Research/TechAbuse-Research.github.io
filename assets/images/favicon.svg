@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Tech Abuse Research</title>
+  <rect width="64" height="64" rx="15" fill="#5C2B84"/>
+  <g stroke="#C08BDD" stroke-opacity=".5" stroke-width="2">
+    <path d="M18 6v52M32 6v52M46 6v52M6 18h52M6 32h52M6 46h52"/>
+  </g>
+</svg>

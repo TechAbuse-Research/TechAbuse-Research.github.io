@@ -1,0 +1,15 @@
+*[Cc][Hh][Ee][Cc][Kk][Ll][Ii][Ss][Tt]*.[Pp][Dd][Ff]
+*[Cc][Hh][Ee][Cc][Kk][Ll][Ii][Ss][Tt]*.[Dd][Oo][Cc]
+*[Cc][Hh][Ee][Cc][Kk][Ll][Ii][Ss][Tt]*.[Dd][Oo][Cc][Xx]
+*[Cc][Hh][Ee][Cc][Kk][Ll][Ii][Ss][Tt]*.[Zz][Ii][Pp]
+*[Ii][Nn][Tt][Ee][Rr][Nn][Aa][Ll]*.[Pp][Dd][Ff]
+*[Ii][Nn][Tt][Ee][Rr][Nn][Aa][Ll]*.[Dd][Oo][Cc][Xx]
+private/
+restricted/
+
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+node_modules/

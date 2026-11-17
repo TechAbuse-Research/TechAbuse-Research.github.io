@@ -1,0 +1,38 @@
+# Tech Abuse Research
+
+> Security researchers at Royal Holloway, University of London, who translate research into practical resources for victims and survivors of domestic tech abuse, and those who support them. The free Tech Abuse Handbook can be downloaded as PDF for the UK and Switzerland in nine languages; the Tech Abuse Checklists for caseworkers are available to organisations and researchers on request.
+
+This is a research team, not a support service. If you are in immediate danger, call 999 in the UK or 117 (police) in Switzerland.
+
+The Tech Abuse Handbook helps victims and survivors take back control: each chapter gives risk examples, explains how to protect yourself and points to additional resources. It covers: Your Digital Safety: The Basics; Financial Abuse; Location Tracking; Intimate Images & Videos; Smart Home; Messaging Apps & Social Media. The mobile layout has tall, single-column pages sized for a phone screen; the desktop layout has conventional A5 pages; both have the same content. The handbook is free to download; copyright Royal Holloway and Bedford New College, published under a Creative Commons CC BY-NC-ND licence.
+
+## Tech Abuse Handbook, UK edition (version 1.0, published November 2025)
+
+- [English, mobile layout (PDF, 2.6 MB)](https://techabuse-research.github.io/assets/documents/uk/handbook-en-mobile-v1-0.pdf)
+- [English, desktop layout (PDF, 1.6 MB)](https://techabuse-research.github.io/assets/documents/uk/handbook-en-desktop-v1-0.pdf)
+- [Polish (Polski), mobile layout (PDF, 3.8 MB)](https://techabuse-research.github.io/assets/documents/uk/handbook-pl-mobile-v1-0.pdf)
+- [Persian (Farsi, فارسی), mobile layout (PDF, 3.8 MB)](https://techabuse-research.github.io/assets/documents/uk/handbook-fa-mobile-v1-0.pdf)
+- [Urdu (اردو), mobile layout (PDF, 4.0 MB)](https://techabuse-research.github.io/assets/documents/uk/handbook-ur-mobile-v1-0.pdf)
+- [Hindi (हिन्दी), mobile layout (PDF, 3.8 MB)](https://techabuse-research.github.io/assets/documents/uk/handbook-hi-mobile-v1-0.pdf)
+- [Portuguese (Português), mobile layout (PDF, 3.8 MB)](https://techabuse-research.github.io/assets/documents/uk/handbook-pt-mobile-v1-0.pdf)
+
+## Tech Abuse Handbook, Swiss edition (version 1.0, published November 2026)
+
+- [English, mobile layout (PDF, 3.9 MB)](https://techabuse-research.github.io/assets/documents/switzerland/handbook-en-mobile-v1-0.pdf)
+- [English, desktop layout (PDF, 1.8 MB)](https://techabuse-research.github.io/assets/documents/switzerland/handbook-en-desktop-v1-0.pdf)
+- [German (Deutsch), mobile layout (PDF, 4.0 MB)](https://techabuse-research.github.io/assets/documents/switzerland/handbook-de-mobile-v1-0.pdf)
+- [German (Deutsch), desktop layout (PDF, 1.7 MB)](https://techabuse-research.github.io/assets/documents/switzerland/handbook-de-desktop-v1-0.pdf)
+- [French (Français), mobile layout (PDF, 3.7 MB)](https://techabuse-research.github.io/assets/documents/switzerland/handbook-fr-mobile-v1-0.pdf)
+- [French (Français), desktop layout (PDF, 1.5 MB)](https://techabuse-research.github.io/assets/documents/switzerland/handbook-fr-desktop-v1-0.pdf)
+- [Italian (Italiano), mobile layout (PDF, 3.9 MB)](https://techabuse-research.github.io/assets/documents/switzerland/handbook-it-mobile-v1-0.pdf)
+- [Italian (Italiano), desktop layout (PDF, 1.7 MB)](https://techabuse-research.github.io/assets/documents/switzerland/handbook-it-desktop-v1-0.pdf)
+
+## Tech Abuse Checklists
+
+- [Tech Abuse Checklists](https://techabuse-research.github.io/#checklists): designed for caseworkers supporting survivors of domestic abuse, to help identify and safely respond to many aspects of tech abuse. Four parts: Initial Screening Checklist; Specialised Tech Abuse Checklists; Risk Indicators and Summary; Action Plan and Signposting. Not publicly downloadable: organisations and researchers can request access on the website.
+
+## About
+
+- [Tech Abuse Research website](https://techabuse-research.github.io/): the handbook editions, the checklists, the research team and contact details
+- [About the team](https://techabuse-research.github.io/#team)
+- [Get in touch](https://techabuse-research.github.io/#contact): questions about the research, print-ready handbook files, licensing, or access to the checklists
